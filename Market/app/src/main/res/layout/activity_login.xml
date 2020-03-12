@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
-    android:padding="32dp">
+    tools:context=".LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:layout_height="81dp"
+            app:srcCompat="@drawable/user"
+            android:layout_marginBottom="20dp"/>
 
         <TextView
             android:id="@+id/textView"
@@ -33,8 +34,7 @@
             android:inputType="textEmailAddress"
             android:hint="email@mail.com"
             android:textSize="18dp"
-
-            />
+            android:layout_marginBottom="20dp" />
 
         <TextView
             android:id="@+id/textView2"
@@ -50,12 +50,26 @@
             android:ems="10"
             android:hint="*******"
             android:inputType="textPersonName"
-            android:textSize="18dp" />
-    </LinearLayout>
+            android:textSize="18dp"
+            android:layout_marginBottom="20dp"/>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/icono" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorBtnLogin"
+            android:onClick="btnLogin"
+            android:text="@string/btn_login"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBtnSignup"
+            android:onClick="btnSignup"
+            android:text="@string/btn_signup"
+            android:textColor="@android:color/background_light" />
+    </LinearLayout>
 </RelativeLayout>
