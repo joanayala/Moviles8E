@@ -22,6 +22,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void btnSignup(View view){
-        Toast.makeText(this, "You have pressed Sign up Button", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "You have pressed Sign up Button", Toast.LENGTH_SHORT).show();
+        Intent actRegister = new Intent(this, RegisterActivity.class);
+        startActivity(actRegister);
     }
 }
