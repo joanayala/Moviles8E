@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.widget.SeekBar;
+import android.widget.Toast;
 
 public class PaletteActivity extends AppCompatActivity
         implements SeekBar.OnSeekBarChangeListener {
@@ -58,6 +59,7 @@ public class PaletteActivity extends AppCompatActivity
     //SEEKBAR'S
     //#############################################
 
+    //Notification that the progress level has changed.
     @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean bo) {
         int r = sbrRed.getProgress();
@@ -67,15 +69,19 @@ public class PaletteActivity extends AppCompatActivity
 
         int color = Color.argb(a,r,g,b);
         vieColors.setBackgroundColor(color);
+
+        //Toast.makeText(this, "The new color is: "+a, Toast.LENGTH_SHORT).show();
     }
 
+    //Notification that the user has started a touch gesture
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
-
+        //Toast.makeText(this, "The user has started a touch gesture", Toast.LENGTH_SHORT).show();
     }
 
+    //Notification that the user has finished a touch
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
-
+        //Toast.makeText(this, "The user has finished a touch", Toast.LENGTH_SHORT).show();
     }
 }
