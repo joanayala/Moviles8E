@@ -3,6 +3,7 @@ package com.example.colors;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
@@ -93,6 +94,11 @@ public class PaletteActivity extends AppCompatActivity
                 sbrGreen.setProgress(0);
                 sbrBlue.setProgress(0);
                 sbrAlpha.setProgress(255);
+                break;
+
+            case R.id.iteAboutof :
+                Intent intent = new Intent(this, AboutofActivity.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);
