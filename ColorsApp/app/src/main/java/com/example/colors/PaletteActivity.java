@@ -1,11 +1,13 @@
 package com.example.colors;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.Toast;
@@ -46,7 +48,7 @@ public class PaletteActivity extends AppCompatActivity
 
     //This method lets us show the menu on mobile app
     //Note: Only in this activity
-    //Note: This method has not actions.
+    //Note: The options on this method have not actions.
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -54,6 +56,47 @@ public class PaletteActivity extends AppCompatActivity
         return super.onCreateOptionsMenu(menu);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.iteTransparent :
+                //Change color
+                sbrAlpha.setProgress(0);
+                Toast.makeText(this,
+                        "You have pressed Transparent", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.iteSemitransparent :
+                sbrAlpha.setProgress(128);
+                break;
+
+            case R.id.iteOpaque :
+                sbrAlpha.setProgress(255);
+                break;
+
+            case R.id.iteBlack :
+                sbrRed.setProgress(0);
+                sbrGreen.setProgress(0);
+                sbrBlue.setProgress(0);
+                sbrAlpha.setProgress(255);
+                break;
+
+            case R.id.iteWhite :
+                sbrRed.setProgress(255);
+                sbrGreen.setProgress(255);
+                sbrBlue.setProgress(255);
+                sbrAlpha.setProgress(255);
+                break;
+
+            case R.id.iteRed :
+                sbrRed.setProgress(255);
+                sbrGreen.setProgress(0);
+                sbrBlue.setProgress(0);
+                sbrAlpha.setProgress(255);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     //#############################################
     //SEEKBAR'S
