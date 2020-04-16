@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -41,6 +42,8 @@ public class PaletteActivity extends AppCompatActivity
         sbrBlue.setOnSeekBarChangeListener(this);
         sbrAlpha.setOnSeekBarChangeListener(this);
 
+        registerForContextMenu(vieColors);
+
     }
 
     //#############################################
@@ -60,6 +63,15 @@ public class PaletteActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
+            case R.id.icSemitransparent :
+                sbrAlpha.setProgress(128);
+                break;
+
+            case R.id.icVoice :
+                Toast.makeText(this,
+                        "I am your voice assistant", Toast.LENGTH_SHORT).show();
+                break;
+
             case R.id.iteTransparent :
                 //Change color
                 sbrAlpha.setProgress(0);
@@ -104,6 +116,22 @@ public class PaletteActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    //ContextMenu
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu2, menu);
+        super.onCreateContextMenu(menu, v, menuInfo);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        //Code the items' actions.
+
+        return super.onContextItemSelected(item);
+    }
+
     //#############################################
     //SEEKBAR'S
     //#############################################
@@ -125,12 +153,14 @@ public class PaletteActivity extends AppCompatActivity
     //Notification that the user has started a touch gesture
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
+
         //Toast.makeText(this, "The user has started a touch gesture", Toast.LENGTH_SHORT).show();
     }
 
     //Notification that the user has finished a touch
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
+
         //Toast.makeText(this, "The user has finished a touch", Toast.LENGTH_SHORT).show();
     }
 }

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/icSemitransparent"
+        android:title="@string/ic_semitransparent"
+        android:icon="@drawable/ic_semitransparent"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/icVoice"
+        android:title="@string/ic_voice"
+        android:icon="@drawable/ic_mic"
+        app:showAsAction="ifRoom" />
+
     <item android:id="@+id/iteTransparent"
         android:title="@string/lbl_transparent" />
     <item android:id="@+id/iteSemitransparent"
