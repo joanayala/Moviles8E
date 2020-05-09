@@ -11,4 +11,5 @@
     <string name="lbl_max_hint">Max weather</string>
     <string name="lbl_weather_hint">Here Weather val</string>
     <string name="btn_text_gomaps">Go to google maps</string>
+    <string name="lbl_ite_help">Help</string>
 </resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyMarket</string>
+    <string name="lbl_usrname">Username</string>
+    <string name="lbl_passwd">Password</string>
+    <string name="Btn_login">Login</string>
+    <string name="Btn_Register">Register</string>
+</resources>
