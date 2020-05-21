@@ -4,4 +4,7 @@
     <string name="lbl_passwd">Password</string>
     <string name="Btn_login">Login</string>
     <string name="Btn_Register">Register</string>
+
+    <!-- activity_signup -->
+    <string name="AB_SignupAc_title">Sign up</string>
 </resources>
