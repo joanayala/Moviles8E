@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ListProductsActivity"
+            android:label="@string/lbl_activity_list_prods"></activity>
+        <activity
             android:name=".Login2Activity"
             android:theme="@style/ThemeLogin">
             <intent-filter>
@@ -20,14 +23,14 @@
         </activity>
         <activity
             android:name=".SignupActivity"
-            android:label="@string/AB_SignupAc_title"></activity>
+            android:label="@string/AB_SignupAc_title" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/ThemeLogin">
-
-        </activity>
+            android:theme="@style/ThemeLogin"></activity>
         <activity android:name=".SplashScreenActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/lbl_activity_main" />
     </application>
 
 </manifest>
